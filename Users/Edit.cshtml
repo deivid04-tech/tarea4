@@ -1,0 +1,10 @@
+<h2>Editar Usuario</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <input id="nombre" name="Nombre" class="form-control" value="@Model.Nombre" />
+    <input id="email" name="Email" class="form-control" value="@Model.Email" />
+
+    <button id="btnEditar" class="btn btn-primary">Guardar</button>
+</form>
