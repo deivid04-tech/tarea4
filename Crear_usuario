@@ -1,0 +1,12 @@
+[Test]
+public void CrearUsuario()
+{
+    LoginCorrecto();
+
+    driver.FindElement(By.LinkText("Crear Usuario")).Click();
+    driver.FindElement(By.Id("nombre")).SendKeys("Juan");
+    driver.FindElement(By.Id("email")).SendKeys("juan@test.com");
+    driver.FindElement(By.Id("btnCrear")).Click();
+
+    Assert.IsTrue(driver.FindElement(By.Id("tabla")).Text.Contains("Juan"));
+}
